@@ -16,8 +16,12 @@
     <link rel="stylesheet" href="scss\styles.css">
   </head>
   <body>
+    <div class="cube">
+      <img class="cube" src="images/illustration-box-desktop.svg" alt="">
+    </div>
     <main class="faq">
       <div class="images">
+       
         <div class="woman-img">
           <img src="images/illustration-woman-online-desktop.svg" alt="">
         </div>
@@ -33,13 +37,19 @@
           You can invite up to 2 additional users on the Free plan. There is no
           limit on team members for the Premium plan.
         </div>
+        <button class="dropdown-arrow">
+          <img src="images/icon-arrow-down.svg" alt="">
+        </button>
       </div>
       <div class="faq__question">
-        <div class="question">What is the maximum file upload size?</div>
-        <div class="answer">
+        <div class="question active">What is the maximum file upload size?</div>
+        <div class="answer answer-active">
           No more than 2GB. All files in your account must fit your allotted
           storage space.
         </div>
+        <button class="dropdown-arrow arrow-active">
+          <img src="images/icon-arrow-down.svg" alt="">
+        </button>
       </div>
       <div class="faq__question">
         <div class="question">How do I reset my password?</div>
@@ -47,6 +57,9 @@
           Click “Forgot password” from the login page or “Change password” from
           your profile page. A reset link will be emailed to you.
         </div>
+        <button class="dropdown-arrow">
+          <img src="images/icon-arrow-down.svg" alt="">
+        </button>
       </div>
       <div class="faq__question">
         <div class="question">Can I cancel my subscription?</div>
@@ -54,10 +67,16 @@
           Yes! Send us a message and we’ll process your request no questions
           asked.
         </div>
+        <button class="dropdown-arrow">
+          <img src="images/icon-arrow-down.svg" alt="">
+        </button>
       </div>
       <div class="faq__question">
         <div class="question">Do you provide additional support?</div>
         <div class="answer">Chat and email support is available 24/7.</div>
+        <button class="dropdown-arrow">
+          <img src="images/icon-arrow-down.svg" alt="">
+        </button>
       </div>
     </div>
     <div class="attribution">
@@ -66,5 +85,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+  <script src="js/index.js"></script>
   </body>
 </html>
