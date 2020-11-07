@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --clr-Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --clr-Soft-red: hsl(14, 88%, 65%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+  padding: 10rem;
+  color: var(--clr-Very-dark-grayish-blue);
+}
+
+img {
+  width: 100%;
+}
+
+.faq {
+  z-index: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  padding: 5rem 3rem;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.woman-img,
+.bg-img {
+  position: relative;
+  width: 400px;
+}
+
+.woman-img {
+  left: -100px;
+  -webkit-filter: saturate(1.5);
+          filter: saturate(1.5);
+}
+
+.bg-img {
+  z-index: 0;
+  top: -240px;
+  left: -450px;
+  width: 800px;
+  position: absolute;
+}
+
+.faq-title {
+  margin-bottom: 2rem;
+}
+
+.answer {
+  max-width: 30rem;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+}
+/*# sourceMappingURL=styles.css.map */
