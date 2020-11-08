@@ -26,6 +26,7 @@ body {
           align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background: linear-gradient(#af67e9, #6565e7);
+  background-repeat: no-repeat;
   padding: 10rem;
   color: var(--clr-Very-dark-grayish-blue);
 }
@@ -38,13 +39,21 @@ main {
   position: relative;
 }
 
+.bg-phone {
+  display: none;
+}
+
+.woman-phone {
+  display: none;
+}
+
 .faq {
   overflow: hidden;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-height: 545.9px;
+  height: 545.9px;
   background-color: white;
   padding: 5rem 3rem;
   border-radius: 20px;
@@ -155,8 +164,8 @@ main {
 
 .attribution {
   position: absolute;
-  bottom: 10px;
-  right: 30%;
+  bottom: 0;
+  left: 10px;
 }
 
 .attribution a {
@@ -168,5 +177,114 @@ main {
 .attribution a:hover {
   color: var(--clr-Soft-red);
   text-decoration: underline;
+}
+
+@media (max-width: 1201px) {
+  .images {
+    width: 350px;
+  }
+  .faq {
+    padding: 5rem 3rem !important;
+  }
+  .faq .faq-wrapper {
+    margin-left: 2rem;
+  }
+  .faq .faq-title {
+    margin-bottom: 0;
+  }
+  .cube {
+    top: 90px;
+  }
+  .woman-img {
+    top: 5px !important;
+    width: 450px;
+  }
+  .bg-img {
+    width: 900px;
+    left: -500px;
+    bottom: -60px;
+    top: unset;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 1.5rem;
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+  .images {
+    display: none;
+  }
+  .faq-wrapper {
+    margin-left: 0 !important;
+  }
+  .woman-img,
+  .bg-img,
+  .cube {
+    display: none;
+  }
+  .bg-phone,
+  .woman-phone {
+    display: block;
+  }
+  .bg-phone {
+    top: 30px;
+    left: 0;
+    right: 0;
+    width: 320px;
+    position: absolute;
+    padding: 0 0 0 2.5rem;
+    z-index: 10;
+    margin: 0 auto;
+  }
+  .bg-phone img {
+    width: 80%;
+  }
+  .woman-phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    z-index: 99;
+    top: -78px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 0 3rem 0 0;
+    width: 320px;
+  }
+  .woman-phone img {
+    width: 100%;
+  }
+  .faq {
+    margin-top: 2rem;
+    text-align: left;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 8rem 2rem !important;
+  }
+  .faq .faq-title {
+    text-align: center;
+  }
+  .faq .question,
+  .faq .answer {
+    font-size: 0.9rem;
+    padding-right: 10px;
+  }
+  .faq .dropdown-arrow {
+    right: -10px;
+  }
+  .attribution {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    bottom: 5px;
+    left: 20px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

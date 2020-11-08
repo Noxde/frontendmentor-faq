@@ -2,7 +2,6 @@ const dropDown = document.querySelectorAll(".dropdown-arrow");
 const faqQuestion = document.querySelectorAll(".question");
 const faqAnswer = document.querySelectorAll(".answer");
 
-console.log(faqAnswer);
 
 dropDown.forEach(function(element) {
     element.addEventListener("click", () => {
@@ -43,24 +42,18 @@ faqQuestion.forEach(function(element){
 
 function checkArrows(e) {
     for (let index = 0; index < e.length; index++) {
-        console.log(e.item(index));
-        e.item(index).classList.remove("arrow-active");
-        
+        e.item(index).classList.remove("arrow-active");  
     }
 }
 
 function checkAnswers(e) {
     for (let index = 0; index < e.length; index++) {
-        console.log(e.item(index));
         e.item(index).classList.remove("answer-active");
-        
     }
 }
 
 function checkQuestion(e) {
     for (let index = 0; index < e.length; index++) {
-        console.log(e.item(index));
         e.item(index).classList.remove("active");
-        
     }
 }

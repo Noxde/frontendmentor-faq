@@ -19,6 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
   padding: 10rem;
   color: var(--clr-Very-dark-grayish-blue);
 }
@@ -31,11 +32,19 @@ main {
   position: relative;
 }
 
+.bg-phone {
+  display: none;
+}
+
+.woman-phone {
+  display: none;
+}
+
 .faq {
   overflow: hidden;
   position: relative;
   display: flex;
-  max-height: 545.9px;
+  height: 545.9px;
   background-color: white;
   padding: 5rem 3rem;
   border-radius: 20px;
@@ -123,8 +132,8 @@ main {
 
 .attribution {
   position: absolute;
-  bottom: 10px;
-  right: 30%;
+  bottom: 0;
+  left: 10px;
   a {
     color: var(--clr-Very-dark-grayish-blue);
     text-decoration: none;
@@ -133,5 +142,111 @@ main {
   a:hover {
     color: var(--clr-Soft-red);
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 1201px) {
+  .images {
+    width: 350px;
+  }
+  .faq {
+    padding: 5rem 3rem !important;
+    .faq-wrapper {
+      margin-left: 2rem;
+    }
+    .faq-title {
+      margin-bottom: 0;
+    }
+  }
+  .cube {
+    top: 90px;
+  }
+  .woman-img {
+    top: 5px !important;
+    width: 450px;
+  }
+  .bg-img {
+    width: 900px;
+    left: -500px;
+    bottom: -60px;
+    top: unset;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 1.5rem;
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+
+  .images {
+    display: none;
+  }
+
+  .faq-wrapper {
+    margin-left: 0 !important;
+  }
+
+  .woman-img,
+  .bg-img,
+  .cube {
+    display: none;
+  }
+  .bg-phone,
+  .woman-phone {
+    display: block;
+  }
+  .bg-phone {
+    top: 30px;
+    left: 0;
+    right: 0;
+    width: 320px;
+    position: absolute;
+    padding: 0 0 0 2.5rem;
+    z-index: 10;
+    margin: 0 auto;
+    img {
+      width: 80%;
+    }
+  }
+  .woman-phone {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 99;
+    top: -78px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 0 3rem 0 0;
+    width: 320px;
+
+    img {
+      width: 100%;
+    }
+  }
+  .faq {
+    margin-top: 2rem;
+    text-align: left;
+    flex-direction: column;
+    padding: 8rem 2rem !important;
+    .faq-title {
+      text-align: center;
+    }
+    .question,
+    .answer {
+      font-size: 0.9rem;
+      padding-right: 10px;
+    }
+    .dropdown-arrow {
+      right: -10px;
+    }
+  }
+  .attribution {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    bottom: 5px;
+    left: 20px;
   }
 }
