@@ -56,6 +56,7 @@ main {
 .bg-img {
   position: relative;
   width: 500px;
+  pointer-events: none;
 }
 
 .woman-img {
@@ -79,6 +80,7 @@ main {
   position: absolute;
   left: -66px;
   top: 35%;
+  pointer-events: none;
 }
 
 .faq-title {
