@@ -1,7 +1,8 @@
 const dropDown = document.querySelectorAll(".dropdown-arrow");
 const faqQuestion = document.querySelectorAll(".question");
+const faqAnswer = document.querySelectorAll(".answer");
 
-console.log(dropDown);
+console.log(faqAnswer);
 
 dropDown.forEach(function(element) {
     element.addEventListener("click", () => {
@@ -11,6 +12,9 @@ dropDown.forEach(function(element) {
             element.previousElementSibling.previousElementSibling.classList.remove("active");
 
         } else {
+            checkArrows(dropDown);
+            checkAnswers(faqAnswer);
+            checkQuestion(faqQuestion);
             element.classList.add("arrow-active");
             element.previousElementSibling.classList.add("answer-active");
             element.previousElementSibling.previousElementSibling.classList.add("active");
@@ -18,8 +22,7 @@ dropDown.forEach(function(element) {
     });
 });
 
-
-faqQuestion.forEach(function(element) {
+faqQuestion.forEach(function(element){
     element.addEventListener("click", () => {
         if (element.classList.contains("active")) {
             element.classList.remove("active");
@@ -27,6 +30,9 @@ faqQuestion.forEach(function(element) {
             element.nextElementSibling.nextElementSibling.classList.remove("arrow-active");
 
         } else {
+            checkArrows(dropDown);
+            checkAnswers(faqAnswer);
+            checkQuestion(faqQuestion);
             element.classList.add("active");
             element.nextElementSibling.classList.add("answer-active");
             element.nextElementSibling.nextElementSibling.classList.add("arrow-active");
@@ -34,3 +40,27 @@ faqQuestion.forEach(function(element) {
     });
 });
 
+
+function checkArrows(e) {
+    for (let index = 0; index < e.length; index++) {
+        console.log(e.item(index));
+        e.item(index).classList.remove("arrow-active");
+        
+    }
+}
+
+function checkAnswers(e) {
+    for (let index = 0; index < e.length; index++) {
+        console.log(e.item(index));
+        e.item(index).classList.remove("answer-active");
+        
+    }
+}
+
+function checkQuestion(e) {
+    for (let index = 0; index < e.length; index++) {
+        console.log(e.item(index));
+        e.item(index).classList.remove("active");
+        
+    }
+}
