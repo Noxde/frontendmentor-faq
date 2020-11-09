@@ -74,6 +74,8 @@ main {
   left: -100px;
   -webkit-filter: saturate(1.5);
           filter: saturate(1.5);
+  -webkit-animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .bg-img {
@@ -85,12 +87,14 @@ main {
 }
 
 .cube {
-  width: 270px;
+  width: 250px;
   z-index: 99;
   position: absolute;
-  left: -66px;
-  top: 35%;
+  left: -61px;
+  top: 34%;
   pointer-events: none;
+  -webkit-animation: hover 2000ms cubic-bezier(0.67, 0.03, 0.41, 0.93) infinite alternate;
+          animation: hover 2000ms cubic-bezier(0.67, 0.03, 0.41, 0.93) infinite alternate;
 }
 
 .faq-title {
@@ -113,6 +117,7 @@ main {
 }
 
 .faq__question .question {
+  position: relative;
   margin: 1rem 0;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -181,6 +186,62 @@ main {
   text-decoration: underline;
 }
 
+@-webkit-keyframes hover {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    -webkit-filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2));
+  }
+  100% {
+    -webkit-filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.2));
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+  }
+}
+
+@keyframes hover {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    -webkit-filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2));
+  }
+  100% {
+    -webkit-filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.2));
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+  }
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 @media (max-width: 1201px) {
   .images {
     width: 350px;
@@ -209,7 +270,7 @@ main {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1024px) {
   body {
     padding: 1.5rem;
     padding-bottom: 0;
